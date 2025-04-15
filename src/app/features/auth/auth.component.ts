@@ -1,43 +1,23 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserLogin } from 'src/app/models/login.model';
 
 @Component({
   selector: 'rv-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss'],
 })
-export class AuthComponent implements OnInit {
-  loginForm!: FormGroup;
+export class AuthComponent {
+  constructor(private _router: Router) {}
 
-  constructor(private _fb: FormBuilder, private _router: Router) {}
-
-  ngOnInit(): void {
-    this.loginForm = this._fb.group({
-      email: ['raven@raven.com', [Validators.required, Validators.email]],
-      password: ['Raven123', [Validators.required, Validators.minLength(6)]],
-    });
-  }
-
-  onSubmit(): void {
-    if (this.loginForm.valid) {
-      const { email, password } = this.loginForm.value;
-      // console.log(this.loginForm.value);
+  login(formValue: UserLogin): void {
+    if (formValue) {
+      const { email, password } = formValue;
       if (email === 'raven@raven.com' && password === 'Raven123') {
         // TODO: refact
-        localStorage.setItem('user', JSON.stringify(this.loginForm.value)); // TODO: helper
+        localStorage.setItem('user', JSON.stringify(formValue)); // TODO: helper
         this._router.navigate(['dashboard']);
       }
-    } else {
-      this.loginForm.markAllAsTouched();
     }
-  }
-
-  get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
   }
 }
