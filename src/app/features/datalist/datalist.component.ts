@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-datalist',
+  selector: 'rv-datalist',
   templateUrl: './datalist.component.html',
-  styleUrls: ['./datalist.component.scss']
+  styleUrls: ['./datalist.component.scss'],
 })
 export class DatalistComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
