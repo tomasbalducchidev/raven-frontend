@@ -1,5 +1,7 @@
+@import 'colors';
+
 .card {
-  background-color: #1E1E2E;
+  background-color: $background-card;
   height: fit-content;
   padding: 20px;
   border-radius: 16px;

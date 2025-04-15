@@ -1,53 +1,41 @@
-@import 'mediaQueries';
+@import "mediaQueries";
+@import "colors";
 
-.input-container {
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.inputs {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   box-sizing: border-box;
+  &__label {
+    margin-bottom: 4px;
+    color: $white;
+  }
+  &__input {
+    border-radius: 4px;
+    width: 60vw;
+    height: 32px;
+    padding: 0 8px;
+  }
+
+  &__error-message {
+    color: $white;
+  }
 }
 
-.label {
-  margin-bottom: 4px;
-  color: azure;
-}
-
-.button-container {
+.buttons {
   display: flex;
   justify-content: center;
 }
 
-.input {
-  border-radius: 4px;
-  width: 60vw;
-  height: 32px;
-  padding: 0 8px;
-
-}
-
-.error-message {
-  color: azure;
-}
-
-button {
-  background-color: #06D6A0;
-  color: #084236;
-  border-radius: 4px;
-  width: 100%;
-  height: 32px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #04b88c;
-  }
-
-}
-
 @include small {
-  .input {
-    width: 300px;
+  .inputs {
+    &__input {
+      width: 300px;
+    }
   }
-
 }
-
-
