@@ -1,0 +1,8 @@
+$small-width: 767px;
+
+@mixin small {
+  @media only screen and (min-width: #{$small-width}) {
+    @content;
+  }
+}
+
