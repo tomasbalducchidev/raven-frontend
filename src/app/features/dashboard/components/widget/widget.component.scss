@@ -1,0 +1,25 @@
+.widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+
+  &__icon-container {
+    padding: 12px;
+    border-radius: 999px;
+
+  }
+}
+
+.color-red {
+  background-color: red;
+}
+.color-green {
+  background-color: green;
+}
+.color-yellow {
+  background-color: yellow;
+}
+.color-blue {
+  background-color: blue;
+}

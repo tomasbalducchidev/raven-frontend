@@ -1,3 +1,11 @@
 <rv-card>
-  <h1>EL WIDGET</h1>
+  <div class="widget">
+    <div>
+      <h1>{{ widgetData.quantity }}</h1>
+      <p>{{ widgetData.description }}</p>
+    </div>
+    <div class="widget__icon-container color-{{widgetData.color}}">
+      <i class="{{ widgetData.icon }}"></i>
+    </div>
+  </div>
 </rv-card>

@@ -1,15 +1,6 @@
 <div class="widgets">
-  <div class="widgets__widget">
-    <rv-widget></rv-widget>
-  </div>
-  <div class="widgets__widget">
-    <rv-widget></rv-widget>
-  </div>
-  <div class="widgets__widget">
-    <rv-widget></rv-widget>
-  </div>
-  <div class="widgets__widget">
-    <rv-widget></rv-widget>
+  <div *ngFor="let widget of widgetData" class="widgets__widget">
+    <rv-widget [widgetData]="widget"></rv-widget>
   </div>
 </div>
 
