@@ -1,0 +1,28 @@
+@import "mediaQueries";
+
+.widgets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px;
+
+  &__widget {
+    margin: 12px 12px;
+  }
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px;
+}
+
+@include small {
+  .widgets {
+    flex-direction: row;
+
+    &__widget {
+      margin: 0 12px;
+    }
+  }
+}
