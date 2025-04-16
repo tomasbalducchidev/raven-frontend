@@ -21,21 +21,21 @@
 
     & th,
     & td {
-      border: 1px solid $whitish;
+      border: 1px solid var(--bg-card);
       padding: 8px;
     }
 
     & th {
-      background-color: $whitish;
+      background-color: var(--bg-card);
       cursor: pointer;
       user-select: none;
     }
 
     & tbody tr:nth-child(even) {
-      background-color: $whitish;
+      background-color: var(--bg-card);
     }
     & tbody tr:nth-child(odd) {
-      background-color: $white;
+      background-color: var(--bg-color);
     }
   }
 

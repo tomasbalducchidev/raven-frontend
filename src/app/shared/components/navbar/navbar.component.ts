@@ -4,14 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'rv-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  constructor(private _router: Router) {}
 
-  constructor(private _router: Router) { }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   goTo(path: string): void {
     this._router.navigate([path]);
@@ -22,10 +20,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toggleTheme() {
-    console.log('change theme!');
-
+    const body = document.body;
+    body.classList.toggle('dark-theme');
   }
-
-
-
 }

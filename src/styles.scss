@@ -1,14 +1,32 @@
 @import "colors";
 
+// THEMES
+:root {
+  --bg-color: #f0ffff;
+  --bg-card: #d5d6d6;
+  --text-color: #282A36;
+  --primary-color: #026b4f;
+  --primary-hover: #04b88c;
+}
+
+.dark-theme {
+  --bg-color: #282A36;
+  --bg-card: #1E1E2E;
+  --text-color: #f0ffff;
+  --primary-color: #06D6A0;
+  --primary-hover: #04b88c;
+}
+
+
 body {
-  background-color: $background;
+  background-color: var(--bg-color);
   margin: 0;
 }
 
 // TEXT
 h1 {
   font-size: 1.5em;
-  color: $white;
+  color: var(--text-color);
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -20,7 +38,7 @@ p,
 label,
 small,
 span {
-  color: $white;
+  color: var(--text-color);
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -28,7 +46,14 @@ span {
   margin: 0;
 }
 
-input, th {
+th {
+  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+input {
   color: $black;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -37,7 +62,7 @@ input, th {
 }
 
 td {
-  color: $black;
+  color: var(--text-color);
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -46,14 +71,14 @@ td {
 
 // BUTTONS
 .btn-primary {
-  background-color: $primary;
+  background-color: var(--primary-color);
   border-radius: 4px;
   width: 100%;
   height: 32px;
   cursor: pointer;
 
   &:hover {
-    background-color: $primary-hover;
+    background-color: var(--primary-hover);
   }
   &:disabled {
     background-color: $disabled;

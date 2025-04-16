@@ -2,7 +2,7 @@
 @import "mediaQueries";
 
 .card {
-  background-color: $background-card;
+  background-color: var(--bg-card);
   height: fit-content;
   padding: 12px;
   border-radius: 16px;
