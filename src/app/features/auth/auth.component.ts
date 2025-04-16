@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserLogin } from 'src/app/models/login.model';
+import { UserLogin } from 'src/app/models/auth.model';
 
 @Component({
   selector: 'rv-auth',

@@ -1,0 +1,16 @@
+  <rv-card>
+    <div class="bar-chart">
+      <div class="bar" *ngFor="let item of chartData">
+        <span class="label">{{ item.label }}</span>
+        <div class="bar-fill-wrapper">
+          <div
+            class="bar-fill bar-fill-color-{{item.color}}"
+            [style.width.%]="item.value"
+            [attr.aria-valuenow]="item.value"
+          ></div>
+          <span class="value">{{ item.value }}</span>
+        </div>
+      </div>
+    </div>
+
+    </rv-card>

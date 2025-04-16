@@ -1,0 +1,35 @@
+@import "mediaQueries";
+
+.widgets {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  justify-content: space-between;
+  margin: 24px;
+  width: 100%;
+
+  &__widget {
+    margin: 12px 0;
+  }
+}
+
+.chart-container {
+  // display: flex;
+  // justify-content: center;
+  margin: 24px;
+  width: 100%;
+}
+
+@include large {
+  .widgets {
+    flex-direction: row;
+
+    &__widget {
+      margin: 0;
+    }
+  }
+}
+
+.dashboard {
+  width: 70vw;
+}

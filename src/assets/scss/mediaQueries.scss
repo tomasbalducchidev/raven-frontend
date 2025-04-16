@@ -1,4 +1,6 @@
 $small-width: 767px;
+$medium-width: 992px;
+$large-width: 1200px;
 
 @mixin small {
   @media only screen and (min-width: #{$small-width}) {
@@ -6,3 +8,14 @@ $small-width: 767px;
   }
 }
 
+@mixin medium {
+  @media only screen and (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: #{$large-width}) {
+    @content;
+  }
+}

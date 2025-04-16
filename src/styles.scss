@@ -18,12 +18,14 @@ h1 {
 
 p,
 label,
-small {
+small,
+span {
   color: $white;
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 input {
