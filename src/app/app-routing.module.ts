@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'login',
     loadChildren: () =>
@@ -21,6 +20,12 @@ const routes: Routes = [
       import('./features/datalist/datalist.module').then(
         (m) => m.DatalistModule
       ),
+  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  {
+    path: '**',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
 ];
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { logout } from 'src/app/helpers/localStorage';
 
 @Component({
   selector: 'rv-navbar',
@@ -16,6 +17,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout() {
+    logout();
     this._router.navigate(['']);
   }
 
