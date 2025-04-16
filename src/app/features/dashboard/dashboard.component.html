@@ -1,9 +1,16 @@
-<div class="widgets">
-  <div *ngFor="let widget of widgetData" class="widgets__widget">
-    <rv-widget [widgetData]="widget"></rv-widget>
+<div class="dashboard">
+  <div class="widgets">
+    <div *ngFor="let widget of widgetData" class="widgets__widget">
+      <rv-widget [widgetData]="widget"></rv-widget>
+    </div>
   </div>
-</div>
 
-<div class="chart-container">
-  <rv-chart></rv-chart>
+  <div class="chart-container">
+    <rv-chart [chartData]="[
+    { label: 'Vuelos en curso', value: 81, color: 'green' },
+    { label: 'Vuelos iniciando', value: 31, color: 'yellow' },
+    { label: 'Vuelos arribando', value: 42, color: 'blue' },
+    { label: 'Vuelos demorados', value: 24, color: 'red' }
+  ]"></rv-chart>
+  </div>
 </div>

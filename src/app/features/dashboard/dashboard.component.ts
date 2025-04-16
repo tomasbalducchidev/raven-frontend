@@ -9,28 +9,28 @@ import { WidgetData } from 'src/app/models/dashboard.model';
 export class DashboardComponent implements OnInit {
   widgetData: WidgetData[] = [
     {
-      quantity: 1773,
-      description: 'Usuarios activos',
-      icon: 'fa-solid fa-user-check',
-      color: 'red',
-    },
-    {
-      quantity: 2908,
-      description: 'Usuarios bloqueados',
-      icon: 'fa-solid fa-user-xmark',
+      quantity: 81,
+      description: 'Vuelos en curso',
+      icon: 'fa-solid fa-plane',
       color: 'green',
     },
     {
-      quantity: 567,
-      description: 'Usuarios eliminados',
-      icon: 'fa-solid fa-user-slash',
+      quantity: 31,
+      description: 'Vuelos iniciando',
+      icon: 'fa-solid fa-plane-departure',
       color: 'yellow',
     },
     {
-      quantity: 10400,
-      description: 'Usuarios enfermos',
-      icon: 'fa-solid fa-user-injured',
+      quantity: 42,
+      description: 'Vuelos arribando',
+      icon: 'fa-solid fa-plane-arrival',
       color: 'blue',
+    },
+    {
+      quantity: 24,
+      description: 'Vuelos demorados',
+      icon: 'fa-solid fa-plane-circle-exclamation',
+      color: 'red',
     },
   ];
 
