@@ -1,0 +1,17 @@
+@import "colors";
+
+.navbar {
+  height: 60px;
+  background-color: var(--bg-card);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+i {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin: 0 24px;
+  cursor: pointer;
+}
