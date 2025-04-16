@@ -4,3 +4,14 @@ export interface WidgetData {
   icon: string,
   color: string,
 }
+
+export interface ChartData {
+  label: string;
+  value: number;
+  color: string;
+}
+
+export interface DashboardData {
+  widetData: WidgetData[];
+  chartData: ChartData[];
+}

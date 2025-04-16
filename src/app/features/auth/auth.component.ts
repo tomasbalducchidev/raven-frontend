@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { setToken } from 'src/app/helpers/localStorage';
 import { UserLogin } from 'src/app/models/auth.model';
 
 @Component({
@@ -15,7 +16,7 @@ export class AuthComponent {
       const { email, password } = formValue;
       if (email === 'raven@raven.com' && password === 'Raven123') {
         // TODO: refact
-        localStorage.setItem('user', JSON.stringify(formValue)); // TODO: helper
+        setToken('token');
         this._router.navigate(['dashboard']);
       }
     }
