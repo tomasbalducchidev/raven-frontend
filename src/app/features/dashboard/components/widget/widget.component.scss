@@ -1,0 +1,27 @@
+@import "colors";
+
+.widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 200px;
+
+  &__icon-container {
+    padding: 12px;
+    border-radius: 999px;
+
+  }
+}
+
+.color-red {
+  background-color: $error;
+}
+.color-green {
+  background-color: $success;
+}
+.color-yellow {
+  background-color: $warning;
+}
+.color-blue {
+  background-color: $secondary;
+}

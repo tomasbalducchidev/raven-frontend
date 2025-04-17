@@ -1,0 +1,35 @@
+<div class="table-container">
+  <input
+    type="text"
+    placeholder="Buscar..."
+    [formControl]="filterText"
+    (input)="onFilterChange()"
+    class="table-container__filter"
+  />
+
+  <table class="table-container__table">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" (click)="changeSort(column.key)">
+          {{ column.label }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of paginatedData">
+        <td *ngFor="let column of columns">{{ row[column.key] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="table-container__pagination">
+    <button class="table-container__pagination__button" (click)="changePage(-1)" [disabled]="currentPage === 1">
+      <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <span>Página {{ currentPage }} de {{ totalPages }}</span>
+    <button class="table-container__pagination__button" (click)="changePage(1)" [disabled]="currentPage === totalPages">
+      <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
+

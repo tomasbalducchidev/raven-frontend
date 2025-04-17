@@ -1,0 +1,50 @@
+{
+  "widgetData": [
+    {
+      "quantity": 81,
+      "description": "Vuelos en curso",
+      "icon": "fa-solid fa-plane",
+      "color": "green"
+    },
+    {
+      "quantity": 31,
+      "description": "Vuelos iniciando",
+      "icon": "fa-solid fa-plane-departure",
+      "color": "yellow"
+    },
+    {
+      "quantity": 42,
+      "description": "Vuelos arribando",
+      "icon": "fa-solid fa-plane-arrival",
+      "color": "blue"
+    },
+    {
+      "quantity": 24,
+      "description": "Vuelos demorados",
+      "icon": "fa-solid fa-plane-circle-exclamation",
+      "color": "red"
+    }
+  ],
+  "chartData": [
+    {
+      "label": "Vuelos en curso",
+      "value": 81,
+      "color": "green"
+    },
+    {
+      "label": "Vuelos partiendo",
+      "value": 31,
+      "color": "yellow"
+    },
+    {
+      "label": "Vuelos arribando",
+      "value": 42,
+      "color": "blue"
+    },
+    {
+      "label": "Vuelos demorados",
+      "value": 24,
+      "color": "red"
+    }
+  ]
+}

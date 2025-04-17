@@ -1,0 +1,16 @@
+@import 'colors';
+@import "mediaQueries";
+
+.card {
+  background-color: var(--bg-card);
+  height: fit-content;
+  padding: 12px;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+@include small {
+  .card {
+    padding: 20px;
+  }
+}
